@@ -1,163 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/number"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="50dp"
-        android:gravity="right"
-        android:paddingRight="10dp"/>
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/delete_all"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:textSize="30dp"
-            android:background="@drawable/button_back"
-            app:backgroundTint="@null"
-            android:textColor="@color/purple_500"
-            android:text="C"/>
-
-        <Button
-            android:id="@+id/skobka"
-            style="@style/button_symbols"
-            android:text="()"/>
-
-        <Button
-            android:id="@+id/persent"
-            style="@style/button_symbols"
-            android:text="%" />
-
-        <Button
-            android:id="@+id/devide"
-            style="@style/button_symbols"
-            android:text="/"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/seven"
-            style="@style/button_numbers"
-            android:text="7"/>
-
-        <Button
-            android:id="@+id/eight"
-            style="@style/button_numbers"
-            android:text="8"/>
-
-        <Button
-            android:id="@+id/nine"
-            style="@style/button_numbers"
-            android:text="9"/>
-
-        <Button
-            android:id="@+id/multiply"
-            style="@style/button_symbols"
-            android:text="*"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/four"
-            style="@style/button_numbers"
-            android:text="4"/>
-
-        <Button
-            android:id="@+id/five"
-            style="@style/button_numbers"
-            android:text="5"/>
-
-        <Button
-            android:id="@+id/six"
-            style="@style/button_numbers"
-            android:text="6"/>
-
-        <Button
-            style="@style/button_symbols"
-            android:text="-"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/one"
-            style="@style/button_numbers"
-            android:text="1"/>
-
-        <Button
-            android:id="@+id/two"
-            style="@style/button_numbers"
-            android:text="2"/>
-
-        <Button
-            android:id="@+id/three"
-            style="@style/button_numbers"
-            android:text="3"/>
-
-        <Button
-            android:id="@+id/plus"
-            style="@style/button_symbols"
-            android:text="+"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/minus"
-            style="@style/button_numbers"
-            android:text="+/-"/>
-
-        <Button
-            android:id="@+id/zero"
-            style="@style/button_numbers"
-            android:text="0"/>
-
-        <Button
-            android:id="@+id/dote"
-            style="@style/button_numbers"
-            android:text="."/>
-
-        <Button
-            android:id="@+id/equal"
-            style="@style/button_equal"
-            android:text="="/>
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

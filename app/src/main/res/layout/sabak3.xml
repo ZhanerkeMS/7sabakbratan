@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_marginLeft="5dp"
+	android:layout_marginTop="10dp"
+	android:layout_marginRight="5dp">
+
+	<ImageView
+		android:id="@+id/image"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		app:srcCompat="@drawable/book" />
+
+	<TextView
+		android:id="@+id/bookname"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/image"
+		android:text="Рождение Дракона (1часть)"
+		android:textColor="@color/purple_500"
+		android:textSize="23sp"
+		android:textStyle="italic" />
+
+	<TextView
+		android:id="@+id/author"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/bookname"
+		android:layout_toRightOf="@id/image"
+		android:fontFamily="sans-serif"
+		android:text="Джули Кагава"
+		android:textColor="#D8000000"
+		android:textSize="18sp" />
+
+	<RatingBar
+		android:id="@+id/ratingBar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/author"
+		android:rating="5"
+		android:stepSize="1"
+		android:layout_toRightOf="@id/image" />
+
+	<Button
+		android:id="@+id/read"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/ratingBar"
+		android:layout_centerInParent="true"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:layout_toRightOf="@id/image"
+		style="@style/button_design"
+		android:text="@string/read" />
+
+	<Button
+		android:id="@+id/add"
+		android:layout_width="50dp"
+		android:layout_height="50dp"
+		android:layout_below="@id/ratingBar"
+		android:layout_toRightOf="@id/read"
+		style="@style/button_add"
+		android:text="+" />
+
+</RelativeLayout>
