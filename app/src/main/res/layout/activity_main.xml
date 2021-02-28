@@ -9,6 +9,15 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/zapis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="40dp"
+        android:gravity="right"
+        android:paddingRight="10dp"/>
+
+    <TextView
         android:id="@+id/number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
