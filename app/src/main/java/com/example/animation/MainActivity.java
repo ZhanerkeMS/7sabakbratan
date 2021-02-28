@@ -1,312 +1,150 @@
 package com.example.animation;
 
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button zero, one, two, three, four, five, six, seven, eight, nine;
-    Button jaksha, prosent, kobeitu, bolu, alu, kosu, equal;
-    Button delete_all, PlusMinus;
-    TextView number, zapis;
+    TextView phone, socialmedia;
+    RadioButton  with_email, with_number;
+    CheckBox computer, laptop, tablet, smartphone;
+    Button create_acc;
 
-    String birinshiSan, ekinshiSan, znak, zapisText;
+    String sign, devices;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        phone = findViewById(R.id.phone);
+        socialmedia = findViewById(R.id.socialmedia);
 
-        zero = findViewById(R.id.zero);
-        one = findViewById(R.id.one);
-        two = findViewById(R.id.two);
-        three = findViewById(R.id.three);
-        four = findViewById(R.id.four);
-        five = findViewById(R.id.five);
-        six = findViewById(R.id.six);
-        seven = findViewById(R.id.seven);
-        eight = findViewById(R.id.eight);
-        nine = findViewById(R.id.nine);
+        with_email = findViewById(R.id.with_email);
+        with_number = findViewById(R.id.whith_number);
 
-        jaksha = findViewById(R.id.jaksha);
-        prosent = findViewById(R.id.prosent);
-        kobeitu = findViewById(R.id.kobeitu);
-        bolu = findViewById(R.id.bolu);
-        alu = findViewById(R.id.alu);
-        kosu = findViewById(R.id.kosu);
+        computer = findViewById(R.id.computer);
+        laptop = findViewById(R.id.laptop);
+        tablet = findViewById(R.id.tablet);
+        smartphone = findViewById(R.id.smartphone);
 
-        PlusMinus = findViewById(R.id.PlusMinus);
-        delete_all = findViewById(R.id.delete_all);
+        create_acc = findViewById(R.id.create_acc);
 
-        equal = findViewById(R.id.equal);
+        registerForContextMenu(socialmedia);
+        registerForContextMenu(phone);
 
-        number = findViewById(R.id.number);
-        zapis = findViewById(R.id.zapis);
-
-        sandarMethods();
-        DeletePlusMinusMethod();
-        functionsMethod();
-
-        zero.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("0");
-            }
-        });
-        one.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("1");
-            }
-        });
-        two.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("2");
-            }
-        });
-        three.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("3");
-            }
-        });
-        four.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("4");
-            }
-        });
-        five.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("5");
-            }
-        });
-        six.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("6");
-            }
-        });
-        seven.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("7");
-            }
-        });
-        eight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("8");
-            }
-        });
-        nine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("9");
-            }
-        });
-
-        jaksha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("()");
-            }
-        });
-        prosent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("%");
-            }
-        });
-        kobeitu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("(*)");
-            }
-        });
-        bolu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                number.setText("/");
-            }
-        });
-        kosu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-        alu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-
-    }
-    public void sandarMethods(){
-        View.OnClickListener btnSandar = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String aldyngySan = number.getText().toString();
-                String basylganSan = "";
-                String songyResult = "";
-
-
-                switch (view.getId()){
-                    case R.id.zero:
-                        basylganSan = "0";
-                        break;
-                    case R.id.one:
-                        basylganSan = "1";
-                        break;
-                    case R.id.two:
-                        basylganSan = "2";
-                        break;
-                    case R.id.three:
-                        basylganSan = "3";
-                        break;
-
-                    case R.id.four:
-                        basylganSan = "4";
-                        break;
-
-                    case R.id.five:
-                        basylganSan = "5";
-                        break;
-
-                    case R.id.six:
-                        basylganSan = "6";
-                        break;
-
-                    case R.id.seven:
-                        basylganSan = "7";
-                        break;
-
-                    case R.id.eight:
-                        basylganSan = "8";
-                        break;
-
-                    case R.id.nine:
-                        basylganSan = "9";
-                        break;
-                }
-                if(!aldyngySan.equals("0")) songyResult = aldyngySan + basylganSan;
-                else songyResult = basylganSan;
-                number.setText(songyResult);
-            }
-        };
-
-        zero.setOnClickListener(btnSandar);
-        one .setOnClickListener(btnSandar);
-        two .setOnClickListener(btnSandar);
-        three.setOnClickListener(btnSandar);
-        four.setOnClickListener(btnSandar);
-        five.setOnClickListener(btnSandar);
-        six .setOnClickListener(btnSandar);
-        seven.setOnClickListener(btnSandar);
-        eight.setOnClickListener(btnSandar);
-        nine.setOnClickListener(btnSandar);
-
-    }
-    public void DeletePlusMinusMethod(){
-        View.OnClickListener btnDeletePlusMinus = new View.OnClickListener() {
+        create_acc.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                switch (view.getId()){
-                    case R.id.delete_all:
-                        number.setText("0");
-                        break;
-                    case R.id.PlusMinus:
-
-                        String sanText = number.getText().toString();
-                        int san = Integer.parseInt(sanText);
-
-                        if (san > 0)number.setText("-"+sanText);
-                        else {
-                            san = san *(-1);
-                            number.setText(""+san);
-                        }
-
-                        break;
-                }
-            }
-        };
-        PlusMinus.setOnClickListener(btnDeletePlusMinus);
-        delete_all.setOnClickListener(btnDeletePlusMinus);
-    }
-    public void functionsMethod(){
-        View.OnClickListener btnFunctions = new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-
-                birinshiSan = number.getText().toString();
-
-                switch(view.getId()){
-                    case R.id.kosu:
-
-                        znak = "+";
-                        break;
-
-                    case R.id.alu:
-
-                        znak = "-";
-                        break;
-
-                    case R.id.kobeitu:
-
-                        znak = "-";
-                        break;
-
-                    case R.id.bolu:
-
-                        znak = "-";
-                        break;
+                if(with_email.isChecked()){
+                    sign = "sign in with e-mail";
+                }else if(with_number.isChecked()){
+                    sign = "sign in with app";
                 }
 
-                zapisText = birinshiSan + znak;
-                zapis.setText(zapisText);
-                number.setText("0");
-
-            }
-        };
-
-        alu.setOnClickListener(btnFunctions);
-        kosu.setOnClickListener(btnFunctions);
-        kobeitu.setOnClickListener(btnFunctions);
-        bolu.setOnClickListener(btnFunctions);
-
-        equal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ekinshiSan = number.getText().toString();
-                int san1 = Integer.parseInt(birinshiSan);
-                int san2 = Integer.parseInt(ekinshiSan);
-                int res = 0;
-
-                if(znak.equals("+")){
-                    res = san1 + san2;
-                }else if(znak.equals("-")){
-                    res = san1 - san2;
-                }else if(znak.equals("*")){
-                    res = san1 * san2;
-                }else if(znak.equals("/")){
-                    res = san1 / san2;
+                if(computer.isChecked()){
+                    devices = "computer user";
                 }
 
-                zapisText = birinshiSan + znak + ekinshiSan +"="+res;
+                if(laptop.isChecked()){
+                    devices = "laptop user";
+                }
 
-                zapis.setText(zapisText);
-                number.setText(""+res);
+                if(tablet.isChecked()){
+                    devices = "tablet user";
+                }
+
+                if(smartphone.isChecked()){
+                    devices = "smartphone user";
+                }
+
+                String result = "User: "+phone.getText()+"\n"+
+                        "User: "+socialmedia.getText()+"\n"+
+                        "Sign in:"+sign+"\n"+
+                        "Create Account:"+create_acc;
+                Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
             }
-
         });
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        if (v == phone) {
+            MenuInflater menuInflater = getMenuInflater();
+            menuInflater.inflate(R.menu.android_menu, menu);
+        }
+        if (v == socialmedia) {
+            MenuInflater menuInflater = getMenuInflater();
+            menuInflater.inflate(R.menu.toke_menu, menu);
+        }
+
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.android:
+                phone.setText("Android");
+                break;
+            case R.id.ios:
+                phone.setText("IOs");
+                break;
+            case R.id.lg:
+                phone.setText("Lg");
+                break;
+            case R.id.xiaomi:
+                phone.setText("Xiaomi");
+                break;
+
+            case R.id.facebook:
+                socialmedia.setText("Facebook");
+                break;
+            case R.id.instagram:
+                socialmedia.setText("Instagram");
+                break;
+            case R.id.twitter:
+                socialmedia.setText("Twitter");
+                break;
+            case R.id.telegram:
+                socialmedia.setText("Telegram");
+                break;
+        }
+        return super.onContextItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_settings:
+                Toast.makeText(this, "setings menu", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.menu_exit:
+                Toast.makeText(this, "exit menu", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

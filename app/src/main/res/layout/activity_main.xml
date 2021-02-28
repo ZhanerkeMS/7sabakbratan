@@ -5,169 +5,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/zapis"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="40dp"
-        android:gravity="right"
-        android:paddingRight="10dp"/>
+        android:text="Choose"
+        />
 
     <TextView
-        android:id="@+id/number"
+        android:id="@+id/phone"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="50dp"
-        android:gravity="right"
-        android:paddingRight="10dp"/>
+        android:text="Phone"
+        />
 
-    <LinearLayout
+    <TextView
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:text="Choose"
+        />
 
-        <Button
-            android:id="@+id/delete_all"
+    <TextView
+        android:id="@+id/socialmedia"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Social Media"
+        />
+
+    <TextView
+        android:id="@+id/sign"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/with_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:textSize="30dp"
-            android:background="@drawable/button_back"
-            app:backgroundTint="@null"
-            android:textColor="@color/red"
-            android:text="C"/>
+            android:text="E-mail" />
+        <RadioButton
+            android:id="@+id/whith_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone number" />
 
-        <Button
-            android:id="@+id/jaksha"
-            style="@style/button_symbols"
-            android:text="()"/>
+    </RadioGroup>
 
-        <Button
-            android:id="@+id/prosent"
-            style="@style/button_symbols"
-            android:text="%" />
+    <TextView
+        android:id="@+id/users"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User devices"
+        />
 
-        <Button
-            android:id="@+id/bolu"
-            style="@style/button_symbols"
-            android:text="/"/>
-
-    </LinearLayout>
-    <LinearLayout
+    <CheckBox
+        android:id="@+id/computer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:text="Computer" />
 
-        <Button
-            android:id="@+id/seven"
-            style="@style/button_numbers"
-            android:text="7"/>
-
-        <Button
-            android:id="@+id/eight"
-            style="@style/button_numbers"
-            android:text="8"/>
-
-        <Button
-            android:id="@+id/nine"
-            style="@style/button_numbers"
-            android:text="9"/>
-
-        <Button
-            android:id="@+id/kobeitu"
-            style="@style/button_symbols"
-            android:text="*"/>
-
-    </LinearLayout>
-    <LinearLayout
+    <CheckBox
+        android:id="@+id/laptop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:text="Laptop" />
 
-        <Button
-            android:id="@+id/four"
-            style="@style/button_numbers"
-            android:text="4"/>
-
-        <Button
-            android:id="@+id/five"
-            style="@style/button_numbers"
-            android:text="5"/>
-
-        <Button
-            android:id="@+id/six"
-            style="@style/button_numbers"
-            android:text="6"/>
-
-        <Button
-            android:id="@+id/alu"
-            style="@style/button_symbols"
-            android:text="-"/>
-
-    </LinearLayout>
-    <LinearLayout
+    <CheckBox
+        android:id="@+id/tablet"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:text="Tablet" />
 
-        <Button
-            android:id="@+id/one"
-            style="@style/button_numbers"
-            android:text="1"/>
-
-        <Button
-            android:id="@+id/two"
-            style="@style/button_numbers"
-            android:text="2"/>
-
-        <Button
-            android:id="@+id/three"
-            style="@style/button_numbers"
-            android:text="3"/>
-
-        <Button
-            android:id="@+id/kosu"
-            style="@style/button_symbols"
-            android:text="+"/>
-
-    </LinearLayout>
-    <LinearLayout
+    <CheckBox
+        android:id="@+id/smartphone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:text="Smartphone" />
 
-        <Button
-            android:id="@+id/PlusMinus"
-            style="@style/button_numbers"
-            android:text="+/-"/>
+    <Button
+        android:id="@+id/create_acc"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        />
 
-        <Button
-            android:id="@+id/zero"
-            style="@style/button_numbers"
-            android:text="0"/>
-
-        <Button
-            android:id="@+id/dote"
-            style="@style/button_numbers"
-            android:text="."/>
-
-        <Button
-            android:id="@+id/equal"
-            style="@style/button_equal"
-            android:text="="/>
-
-    </LinearLayout>
 
 
 </LinearLayout>
