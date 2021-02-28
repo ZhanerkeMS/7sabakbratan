@@ -1,140 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="20dp"
-    android:layout_marginTop="90dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginBottom="20dp"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Регистрация"
-        android:textAlignment="center"
-        android:textColor="#A10AE1"
-        android:textColorHint="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="left"
-        android:orientation="vertical">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/ic_name_line" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="имя"
-        android:inputType="textPersonName"
-        android:text="" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/ic_surname_line" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="фамилия"
-        android:inputType="textPersonName"
-        android:text="" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/ic_number_line" />
-
-    <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="номер телефона"
-        android:inputType="phone" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/ic_mail_line" />
-
-         <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="эл. почта"
-        android:inputType="textEmailAddress" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_password_line" />
-        <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="пароль"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Вход"
-        android:textAlignment="center" />
+        android:text="0"
+        android:textSize="50dp"
+        android:gravity="right"
+        android:paddingRight="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:scrollbarSize="20dp">
+        android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textView"
+        <Button
+            android:id="@+id/delete_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:fontFamily="sans-serif-medium"
-            android:text="У вас уже есть аккаунт?"
-            android:textAlignment="viewEnd" />
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:textSize="30dp"
+            android:background="@drawable/button_back"
+            app:backgroundTint="@null"
+            android:textColor="@color/purple_500"
+            android:text="C"/>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:fontFamily="sans-serif-medium"
-            android:text="Войти"
-            android:textColor="#AA12A3" />
+        <Button
+            android:id="@+id/skobka"
+            style="@style/button_symbols"
+            android:text="()"/>
+
+        <Button
+            android:id="@+id/persent"
+            style="@style/button_symbols"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/devide"
+            style="@style/button_symbols"
+            android:text="/"/>
+
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
+        <Button
+            android:id="@+id/seven"
+            style="@style/button_numbers"
+            android:text="7"/>
+
+        <Button
+            android:id="@+id/eight"
+            style="@style/button_numbers"
+            android:text="8"/>
+
+        <Button
+            android:id="@+id/nine"
+            style="@style/button_numbers"
+            android:text="9"/>
+
+        <Button
+            android:id="@+id/multiply"
+            style="@style/button_symbols"
+            android:text="*"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/four"
+            style="@style/button_numbers"
+            android:text="4"/>
+
+        <Button
+            android:id="@+id/five"
+            style="@style/button_numbers"
+            android:text="5"/>
+
+        <Button
+            android:id="@+id/six"
+            style="@style/button_numbers"
+            android:text="6"/>
+
+        <Button
+            style="@style/button_symbols"
+            android:text="-"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/one"
+            style="@style/button_numbers"
+            android:text="1"/>
+
+        <Button
+            android:id="@+id/two"
+            style="@style/button_numbers"
+            android:text="2"/>
+
+        <Button
+            android:id="@+id/three"
+            style="@style/button_numbers"
+            android:text="3"/>
+
+        <Button
+            android:id="@+id/plus"
+            style="@style/button_symbols"
+            android:text="+"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/minus"
+            style="@style/button_numbers"
+            android:text="+/-"/>
+
+        <Button
+            android:id="@+id/zero"
+            style="@style/button_numbers"
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/dote"
+            style="@style/button_numbers"
+            android:text="."/>
+
+        <Button
+            android:id="@+id/equal"
+            style="@style/button_equal"
+            android:text="="/>
+
+    </LinearLayout>
 
 
 </LinearLayout>
