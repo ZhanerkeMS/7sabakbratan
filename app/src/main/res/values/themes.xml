@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Lesson3" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Canculator" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -14,17 +14,35 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="button_design">
+    <style name="button_symbols">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/button_design</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@drawable/button_back</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="button_numbers">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@drawable/button_click</item>
         <item name="backgroundTint">@null</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="button_add">
+    <style name="button_equal">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">@drawable/button_equal</item>
         <item name="backgroundTint">@null</item>
         <item name="android:textColor">@color/white</item>
     </style>
